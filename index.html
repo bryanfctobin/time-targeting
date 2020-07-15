@@ -1,0 +1,64 @@
+<!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Saving the internet, one publisher at a time.">
+    <link rel="shortcut icon" type="image/png" href="https://bryantobin.com/content/bryan-face-fav.png"/>
+    <title>Time Testing</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- MVP CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">!(function(o,n,t){t=o.createElement(n),o=o.getElementsByTagName(n)[0],t.async=1,t.src="https://suddensoda.com/v2hguzJ1Tb73qw4v276K6w6fa_TWV1R7GgMRcXn_tfH3oCONgC_cufq-_iSo9PwBR3cXzUg0j6HpXGzHVJmJ9uQ",o.parentNode.insertBefore(t,o)})(document,"script"),(function(o,n){o[n]=o[n]||function(){(o[n].q=o[n].q||[]).push(arguments)}})(window,"admiral");!(function(c,e,o,t,n){function r(o,t){(function n(){try{return 0<(localStorage.getItem("v4ac1eiZr0")||"").split(",")[4]}catch(o){}return!1})()&&(t=c[e].pubads())&&t.setTargeting("admiral-engaged","true")}(n=c[e]=c[e]||{}).cmd=n.cmd||[],typeof n.pubads===o?r():typeof n.cmd.unshift===o?n.cmd.unshift(r):n.cmd.push(r)})(window,"googletag","function");</script>
+    <script type="text/javascript">
+    window.admiral("targeting","pause", 200);
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/"><img src="https://admiralarmada.com/content/adm.svg?text=logo" height="70"></a>
+            <ul>
+                <li><a href="https://getadmiral.com/?ref=subTest">Admiral</a></li>
+                <li><a href="mailto:bryan@getadmiral.com?Subject=Sub&20Test">Contact</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            <div class="text-center" id="engagementState"></div>
+            <div class="text-center" id="timeRightNow"></div>
+        </h1>
+    </main>
+    <script>
+        var timber = {};
+        timber.e = "display";
+        timber.a = document.querySelector('#timeRightNow');
+        timber.b = document.querySelector('#engagementState');
+        timber.d = new Date();
+        timber.f = timber.d.getHours();
+        timber.g = function checkTime() {
+            this.a.textContent = this.d;
+            if (this.f >= 7 && this.f <= 14) {
+                this.b.textContent = "School is IN SESSION";
+                window.admiral('targeting','set','displayEngage',timber.e);
+                return true;
+            }
+            this.b.textContent = "School is OUT for SUMMER";
+        }
+        timber.g();
+        window.admiral('targeting','ready');
+    </script>
+</body>
+</html>
+
